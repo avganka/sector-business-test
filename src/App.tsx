@@ -1,5 +1,7 @@
+import PostsPage from './pages/PostsPage/PostsPage';
+
 function App() {
-  return <h1>Init</h1>;
+  return <PostsPage />;
 }
 
 export default App;
