@@ -1,0 +1,35 @@
+.search {
+  position: relative;
+}
+
+.searchButton {
+  color: #ffffff;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.searchButton:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.searchInput {
+  width: 100%;
+  background-color: #5a5c66;
+  padding: 19px 45px 16px 26px;
+  border: none;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 137.687%;
+}
+
+.searchInput::placeholder {
+  color: #b2b7bf;
+}
