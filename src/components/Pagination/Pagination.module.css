@@ -21,9 +21,18 @@
   font-family: Roboto;
   transition: color, transform 0.3s ease-in-out;
 }
+
 .button:hover {
   color: #5a5c66;
   transform: scale(1.2);
+}
+
+.button:disabled,
+.button:disabled:hover {
+  user-select: none;
+  cursor: not-allowed;
+  color: #838697;
+  transform: none;
 }
 
 .pages {

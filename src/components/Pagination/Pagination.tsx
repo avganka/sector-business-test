@@ -11,11 +11,13 @@ export default function Pagination({totalPages, currentPage, setCurrentPage}: Pa
   return (
     <div className={styles.pagination}>
       <button
+        disabled={currentPage == 1}
         className={cn(styles.button, styles.prevNextButtons)}
         onClick={() => setCurrentPage(currentPage - 1)}
       >
         Назад
       </button>
+
       <div className={styles.pages}>
         {Array(totalPages)
           .fill(0)
@@ -31,7 +33,9 @@ export default function Pagination({totalPages, currentPage, setCurrentPage}: Pa
             </button>
           ))}
       </div>
+
       <button
+        disabled={currentPage == totalPages}
         className={cn(styles.button, styles.prevNextButtons)}
         onClick={() => setCurrentPage(currentPage + 1)}
       >
