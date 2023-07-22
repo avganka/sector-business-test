@@ -1,0 +1,16 @@
+.spinner {
+  position: absolute;
+  left: 1%;
+  top: 1%;
+}
+
+.spinnerPath {
+  transform-origin: center;
+  animation: spinner 0.75s infinite linear;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}

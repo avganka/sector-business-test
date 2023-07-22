@@ -1,13 +1,22 @@
 import {ReactComponent as SearchIcon} from '../../assets/search.svg';
 import styles from './Search.module.css';
 
-export default function Search(): JSX.Element {
+interface SearchProps {
+  search: string;
+  setSearch: (search: string) => void;
+}
+
+export default function Search({search, setSearch}: SearchProps): JSX.Element {
   return (
-    <form className={styles.search}>
-      <input className={styles.searchInput} type='text' placeholder='Поиск' />
-      <button type='submit' className={styles.searchButton}>
-        <SearchIcon />
-      </button>
-    </form>
+    <div className={styles.search}>
+      <input
+        className={styles.searchInput}
+        type='text'
+        placeholder='Поиск'
+        value={search}
+        onChange={(evt) => setSearch(evt.target.value)}
+      />
+      <SearchIcon className={styles.searchButton} />
+    </div>
   );
 }

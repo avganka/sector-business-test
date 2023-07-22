@@ -1,8 +1,16 @@
 .pagination {
   padding: 15px 25px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .pagination {
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
 .button {
@@ -20,6 +28,7 @@
 
 .pages {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   gap: 15px;
